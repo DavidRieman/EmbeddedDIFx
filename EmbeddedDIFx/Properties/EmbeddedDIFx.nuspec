@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>$id$</id>
+    <version>$version$</version>
+    <title>$title$</title>
+    <authors>$author$</authors>
+    <owners>$author$</owners>
+    <copyright>Copyright 2018</copyright>
+    <description>$description$</description>
+    <licenseUrl>https://opensource.org/licenses/MIT</licenseUrl>
+    <projectUrl>https://github.com/DavidRieman/EmbeddedDIFx</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <tags>DIFx installation uninstallation DriverPackageInstall DriverPackageUninstall driver embedded</tags>
+    <releaseNotes>Initial release.</releaseNotes>
+  </metadata>
+</package>
