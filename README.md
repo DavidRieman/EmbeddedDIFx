@@ -29,4 +29,5 @@ If your goal is to reach a single-file driver installer with zero loose file dep
 (It extracts the .inf and related driver files on the fly as well.)
 
 ## Accessible through NuGet
-TODO: Hopefully this will be "EmbeddedDIFx" on NuGet soon.
+The [NuGet package](https://www.nuget.org/packages/EmbeddedDIFx) can be acquired in the usual NuGet ways, such as the Package Manager console with:
+```Install-Package EmbeddedDIFx```
