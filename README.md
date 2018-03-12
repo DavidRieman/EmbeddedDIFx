@@ -15,7 +15,8 @@ Example:
 ```
 using (var difx = new DIFx())
 {
-	difx.DriverInstallPackage(extractedInf, DriverPackageFlags.ONLY_IF_DEVICE_PRESENT | DriverPackageFlags.FORCE)
+  var flags = DriverPackageFlags.ONLY_IF_DEVICE_PRESENT | DriverPackageFlags.FORCE;
+  difx.DriverInstallPackage(extractedInf, flags);
 }
 ```
 
