@@ -6,7 +6,7 @@
     <title>$title$</title>
     <authors>$author$</authors>
     <owners>$author$</owners>
-    <copyright>Copyright 2018</copyright>
+    <copyright>$copyright$</copyright>
     <description>$description$</description>
     <licenseUrl>https://opensource.org/licenses/MIT</licenseUrl>
     <projectUrl>https://github.com/DavidRieman/EmbeddedDIFx</projectUrl>

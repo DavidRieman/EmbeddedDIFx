@@ -9,7 +9,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("David Rieman")]
 [assembly: AssemblyProduct("EmbeddedDIFx")]
-[assembly: AssemblyCopyright("Copyright © 2017 David Rieman")]
+[assembly: AssemblyCopyright("Copyright © 2018 David Rieman")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
