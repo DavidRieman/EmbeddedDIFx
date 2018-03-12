@@ -4,7 +4,6 @@
 namespace EmbeddedDIFx
 {
     using System;
-    using System.ComponentModel;
     using System.IO;
     using System.Reflection;
     using System.Runtime.InteropServices;
@@ -76,7 +75,7 @@ namespace EmbeddedDIFx
             var r = installDelegate(infPath, (UInt32)flags, IntPtr.Zero, out rebootRequired);
             if (r != 0)
             {
-                throw new Win32Exception((int)r, "DriverPackageInstall failed with DIFxAPI error 0x" + r.ToString("X8"));
+                throw new DriverPackageException(r, "DriverPackageInstall failed with DIFxAPI error 0x" + r.ToString("X8"));
             }
 
             return !rebootRequired;
@@ -92,7 +91,7 @@ namespace EmbeddedDIFx
             var r = uninstallDelegate(infPath, (UInt32)flags, IntPtr.Zero, out rebootRequired);
             if (r != 0)
             {
-                throw new Win32Exception((int)r, "DriverPackageUninstall failed with DIFxAPI error 0x" + r.ToString("X8"));
+                throw new DriverPackageException(r, "DriverPackageUninstall failed with DIFxAPI error 0x" + r.ToString("X8"));
             }
 
             return !rebootRequired;

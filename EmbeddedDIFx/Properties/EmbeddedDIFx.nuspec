@@ -12,6 +12,6 @@
     <projectUrl>https://github.com/DavidRieman/EmbeddedDIFx</projectUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <tags>DIFx installation uninstallation DriverPackageInstall DriverPackageUninstall driver embedded</tags>
-    <releaseNotes>Initial release.</releaseNotes>
+    <releaseNotes>Now with updated exception handling.</releaseNotes>
   </metadata>
 </package>

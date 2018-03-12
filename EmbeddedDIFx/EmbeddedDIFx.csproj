@@ -37,6 +37,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DIFx.cs" />
+    <Compile Include="DriverPackageException.cs" />
     <Compile Include="InteropKernel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
