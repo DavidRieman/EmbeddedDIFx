@@ -30,4 +30,6 @@ If your goal is to reach a single-file driver installer with zero loose file dep
 
 ## Accessible through NuGet
 The [NuGet package](https://www.nuget.org/packages/EmbeddedDIFx) can be acquired in the usual NuGet ways, such as the Package Manager console with:
-```Install-Package EmbeddedDIFx```
+```
+Install-Package EmbeddedDIFx
+```
