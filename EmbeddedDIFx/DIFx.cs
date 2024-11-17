@@ -69,10 +69,9 @@ namespace EmbeddedDIFx
         /// <returns>True if installation is complete, else false if a reboot is required to complete installation. May throw upon errors.</returns>
         public bool DriverPackageInstall(string infPath, DriverPackageFlags flags)
         {
-            bool rebootRequired;
             var proc = InteropKernel.GetProcAddress(handle, "DriverPackageInstallW");
             var installDelegate = (Interop.DriverPackageInstall)Marshal.GetDelegateForFunctionPointer(proc, typeof(Interop.DriverPackageInstall));
-            var r = installDelegate(infPath, (UInt32)flags, IntPtr.Zero, out rebootRequired);
+            var r = installDelegate(infPath, (UInt32)flags, IntPtr.Zero, out bool rebootRequired);
             if (r != 0)
             {
                 throw new DriverPackageException(r, "DriverPackageInstall failed with DIFxAPI error 0x" + r.ToString("X8"));
@@ -85,10 +84,9 @@ namespace EmbeddedDIFx
         /// <returns>True if uninstallation is complete, else false if a reboot is required to complete uninstallation. May throw upon errors.</returns>
         public bool DriverPackageUninstall(string infPath, DriverPackageFlags flags)
         {
-            bool rebootRequired;
             var proc = InteropKernel.GetProcAddress(handle, "DriverPackageUninstallW");
             var uninstallDelegate = (Interop.DriverPackageUninstall)Marshal.GetDelegateForFunctionPointer(proc, typeof(Interop.DriverPackageUninstall));
-            var r = uninstallDelegate(infPath, (UInt32)flags, IntPtr.Zero, out rebootRequired);
+            var r = uninstallDelegate(infPath, (UInt32)flags, IntPtr.Zero, out bool rebootRequired);
             if (r != 0)
             {
                 throw new DriverPackageException(r, "DriverPackageUninstall failed with DIFxAPI error 0x" + r.ToString("X8"));
@@ -116,7 +114,6 @@ namespace EmbeddedDIFx
         private void ExtractDLL()
         {
             var assembly = Assembly.GetExecutingAssembly();
-            var embeddedResources = assembly.GetManifestResourceNames();
             var embeddedResourcePath = "EmbeddedDIFx.Resources." + TargetDLL;
             using (var resourceStream = assembly.GetManifestResourceStream(embeddedResourcePath))
             using (var fileStream = new FileStream(this.tempPath, FileMode.Create))
