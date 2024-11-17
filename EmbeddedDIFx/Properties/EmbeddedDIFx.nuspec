@@ -16,6 +16,6 @@
     <version>$version$</version>
   </metadata>
   <files>
-    <file src="..\README.md" target="docs" />
+    <file src="..\..\README.md" target="docs" />
   </files>
 </package>
