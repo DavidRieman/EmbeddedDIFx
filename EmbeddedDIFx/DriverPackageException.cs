@@ -5,6 +5,9 @@ namespace EmbeddedDIFx
 {
     using System;
 
+    /// <summary>
+    /// DriverPackageException indicates an unexpected error occurred during driver package installation or uninstallation.
+    /// </summary>
     public class DriverPackageException : Exception
     {
         public DriverPackageException(uint errorCode, string message) : base(message)

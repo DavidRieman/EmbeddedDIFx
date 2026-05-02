@@ -53,13 +53,6 @@
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
-    <PostBuildEvent>if $(ConfigurationName) == Release $(SolutionDir)packages\NuGet.CommandLine.6.12.1\tools\NuGet.exe pack $(ProjectPath) -properties Configuration=Release</PostBuildEvent>
+    <PostBuildEvent>if $(ConfigurationName) == Release $(SolutionDir)packages\NuGet.CommandLine.7.3.1\tools\NuGet.exe pack $(ProjectPath) -properties Configuration=Release</PostBuildEvent>
   </PropertyGroup>
-  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
-       Other similar extension points exist, see Microsoft.Common.targets.
-  <Target Name="BeforeBuild">
-  </Target>
-  <Target Name="AfterBuild">
-  </Target>
-  -->
 </Project>
